@@ -28,6 +28,10 @@
                     value: urldata
                 });
             })();
+            var dataURL = document.getElementById('qr-code').toDataURL();
+            var aele = document.getElementById("qrcode");
+            aele.setAttribute("href",dataURL);
+            aele.setAttribute("download",docid);
             
 	}
 	else {
@@ -362,12 +366,12 @@
 <div class="flex-container">
 
   <div class="flex-child">
-    <p style="font-weight:bold;font-size:50px;" id="hashtext"></p>
+    <p style="font-weight:bold;font-size:25px;" id="hashtext"></p>
   </div>
   
-  <div class="flex-child">
-    <p id="qr-result" style="font-weight:bold;font-size:30px;"></p>
-    <a href="#qr-code" download="<script>getfilename()</script>">
+  <div class="flex-child" style="margin-left:2%;">
+    <p id="qr-result" style="font-weight:bold;font-size:25px;"></p>
+    <a href="" download="" id="qrcode">
         <canvas id="qr-code"></canvas></a>
   </div>
   
